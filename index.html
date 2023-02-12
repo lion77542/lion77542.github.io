@@ -9,7 +9,7 @@
                 background-size: cover;
 	}
 	</style>
-<svg xmlns="jb" width="1100" height="120" >
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="120" >
     <linearGradient id="linearGradient" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" style="stop-color:rgb(255,255,0); stop-opacity:1"/>
         <stop offset="100%" style="stop-color:rgb(255,0,0); stop-opacity:1"/>
@@ -71,7 +71,15 @@
       </section>
     </main>
 						    <!--这里开始是每日一句-->
-<p id="hitokoto">:D 获取中...</p>
+<style>
+#hitokoto {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+</style>
+<p id="hitokoto" >:D 获取中...</p>
 <!-- 兼容低版本浏览器 (包括 IE)，可移除 -->
 <script src="https://cdn.bootcss.com/bluebird/3.5.1/bluebird.core.min.js"></script>
 <script src="https://cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
