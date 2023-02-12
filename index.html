@@ -70,6 +70,34 @@
         </form>
       </section>
     </main>
+						    <!--这里开始是每日一句-->
+    <svg xmlns="hitokoto" width="1100" height="120" >
+    <linearGradient id="linearGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:rgb(255,255,0); stop-opacity:1"/>
+        <stop offset="100%" style="stop-color:rgb(255,0,0); stop-opacity:1"/>
+    </linearGradient>
+    <text x="0" y="110" font-size="100px" fill="url(#linearGradient)">2111</text>
+	</svg>
+						   
+    <p id="hitokoto">:D 获取中...</p>
+<!-- 兼容低版本浏览器 (包括 IE)，可移除 -->
+<script src="https://cdn.bootcss.com/bluebird/3.5.1/bluebird.core.min.js"></script>
+<script src="https://cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
+<!--End-->
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = data.hitokoto; 
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
+							      <!--结束了-->
     <footer>
       <p>Copyright &copy; 2023 My Blog——>LIN's Blog</p>
 	    <p>背景图为BING每日一图 来自kdcc.cn</p>
